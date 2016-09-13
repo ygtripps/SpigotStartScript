@@ -6,7 +6,7 @@ An easy to use bash script that will start your spigot server with ease!
 
 To install this script simply clone the repository to your server or simply download the bash script.
 
-** Make sure to change the directory and jar file inside the bash file.
+** Make sure to change the directory and jar file inside the bash file. **
 
 To start the server simply execute the following command
 
