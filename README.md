@@ -21,4 +21,3 @@ Java 7+, Screen, Spigot/Bukkit Jar File
 * Yes and No prompts
 * Easy to configure the commands
 * Checks to see if the server is already running
-* 
