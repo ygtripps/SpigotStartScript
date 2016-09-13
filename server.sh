@@ -10,13 +10,14 @@ then
     if [[ "$resp" == "y" || "$resp" == "Y" ]]; then
         read -p "Do you want to restart the server? [Y/n]" resp2
         if [[ "$resp2" == "y" || "$resp2" == "Y" ]]; then
-            echo "Restarting your server now."
-            kill -9 $pid 2>/dev/null
+            echo "Restarting your server now, please wait 30 seconds!"
+            sleep 30 && screen -S $screen -p 0 -X stuff "stop$(printf \\r)"
             screen -wipe
             eval "cd $directory && $command"
         else
             echo "Stopping your server now as requested."
-            kill -9 $pid 2>/dev/null
+            echo "Sending stop command, please wait 30 seconds!"
+            sleep 30 && screen -S $screen -p 0 -X stuff "stop$(printf \\r)"
             screen -wipe
         fi
     fi
